@@ -1,7 +1,7 @@
 obj-m += bbit.o
 
 all: 
-	make -C /home/venero/workspace/git/linux-nova-dev M=$(PWD) modules
+	make -C /lib/modules/$(shell uname -r)/build M=`pwd` modules
 
 clean:
-	make -C /home/venero/workspace/git/linux-nova-dev M=$(PWD) clean
+	make -C /lib/modules/$(shell uname -r)/build M=`pwd` clean
